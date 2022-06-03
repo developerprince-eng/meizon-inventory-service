@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="standard_output_to_console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} %yellow([%thread]) %highlight(%-5level) %logger{36} .%C %M - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="json_file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/logback-json.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>logs/logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- retain 30 days logs -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+
+    <springProfile name="development, production, staging">-->
+        <root level="info">
+            <appender-ref ref="json_file"/>
+        </root>
+        <root level="info">
+            <appender-ref ref="standard_output_to_console"/>
+        </root>
+    </springProfile>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+    <springProfile name="dev,int,sbx,prod,uat,dr">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+                <customFields>{"application":"credit_us-intellideal-vin-solutions-service", "cf_instance_guid": "${CF_INSTANCE_GUID}", "cf_instance_index":
+                    "${CF_INSTANCE_INDEX}", "spring_profile": "${SPRING_PROFILES_ACTIVE}" }
+                </customFields>
+            </encoder>
+        </appender>
+    </springProfile>
+    <springProfile name="default,local">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>
+                    %d{dd-MM-yyyy HH:mm:ss.SSS} %yellow([%thread]) %highlight(%-5level) %logger{36} .%C %M - %msg%n
+                </pattern>
+            </encoder>
+        </appender>
+    </springProfile>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

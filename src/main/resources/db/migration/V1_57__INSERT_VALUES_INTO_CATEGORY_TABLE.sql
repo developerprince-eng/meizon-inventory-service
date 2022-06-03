@@ -1,0 +1,2 @@
+INSERT INTO public.category (category_id, name, description) VALUES ('hdjdhu-eueueyr-8893kd', 'FUEL', 'Energy and power');
+INSERT INTO public.category (category_id, name, description) VALUES ('lkfehu-kldueyr-7383kd', 'ACCESSORIES', 'Accessories and other items');

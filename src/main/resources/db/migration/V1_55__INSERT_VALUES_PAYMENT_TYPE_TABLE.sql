@@ -1,0 +1,2 @@
+INSERT INTO public.payment_type (type_id, descriptor_type) VALUES ('sjkajskajsiwu8383821', 'CASH');
+INSERT INTO public.payment_type (type_id, descriptor_type) VALUES ('sjk5jshajsiwu838385j', 'ECOCASH');

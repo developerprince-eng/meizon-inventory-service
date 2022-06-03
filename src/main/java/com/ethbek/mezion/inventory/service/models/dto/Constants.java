@@ -1,0 +1,72 @@
+package com.ethbek.mezion.inventory.service.models.dto;
+
+
+public class Constants {
+    public static final String ACK = "ACK";
+    public static final String NUMERIC_FORMATTER="(\\d{3})(\\d{3})(\\d+)";
+    public static final String EMPTY = "";
+    public static final String DATE_FORMAT = "yyyy-MM-dd";
+    public static final String CUSTOMDATETIMEFORMAT = "yyyy-MM-dd'T'HHmmss";
+    public static final String DATETIMEFORMAT = "dd-MM-yyyy HH:mm:ss";
+    public static final String DATE_CREATED = "date_created";
+    public static final String NO_FILE = "No attached File";
+    public static final String NO_DOCUMENT_TYPE = "No Such Document Type";
+    public static final String NO_DOCUMENT_CATEGORY = "No Such Document Type";
+    public static final String NO_PROPRIETARY_FLAG = "No Such Document Type";
+    public static final String FAILED_TO_ATTACH = "Failed to upload the attachment";
+    public static final String DATETIMETOSIMPLEDATE = "MM-dd-yyyy";
+    public static final String NO_SUCH_RESOURCE = "No Such Resource";
+    public static final String DECIMALFORMAT = "0.00";
+    public static final String YRS = " yrs ";
+    public static final String MO = " mo";
+    public static final String FORBIDDEN_MESSAGE = "ERROR: The user is not authorised to access or modify the requested entity => ";
+    public static final String PRODUCT_UNAVAILABLE = "ERROR: The requested product is not available for the requesting branch. ";
+    public static final String CUSTOMER_IS_INACTIVE="The customer is not ACTIVE";
+    public static final String TEMPLATE_NOT_FOUND = "Template not Found";
+    public static final String SMS_TEMPLATE_NOT_FOUND = "SMS Template not Found";
+    public static final String TEMPLATE_NOT_CREATED = "Unable to create template";
+    public static final String TEMPLATE_NOT_UPDATED = "Sms Template update failed, check if template exists";
+    public static final String TEMPLATE_DELETED_SUCCESSFULLY = "Template has been deleted successfully";
+    public static final String EMPTY_LIST = "No templates have been added";
+    public static final String PRODUCT_SKU_LITERAL = " ProductSku: ";
+    public static final String BRANCH_ID_LITERAL = ", Branch ID: ";
+    public static final String ORGANISATION_ID_LITERAL = ", Organisational ID: ";
+    public static final String AUTH_TYPE = "Bearer ";
+    public static final String DOCUMENT_SAVED_MESSAGE = "Successfully saved document for customer =====> {}";
+    public static final String FAILED_TO_RETRIEVE_SETTINGS = "Failed to retrieve Custom settings";
+    public static final String FAILED_TO_RETRIEVE_GENERAL_SETTINGS = "Failed to retrieve general settings";
+    public static final String FAILED_TO_FETCH_EVENT_DETAILS= "Failed to fetch Event details";
+    public static final String FAILED_TO_FETCH_SETTINGS_TOKEN= "Failed to get settings token";
+    public static final String USER_NOT_AUTHORISED = "This user is not Authorised to access this service";
+    public static final String NULL_APPLICATION_FORM = "Application form is null";
+    public static final String SUCCESSFULLY_FETCHED_EVENT_DETAILS= "Successfully fetched event Id from customer profile for customer {}";
+    public static final String SUCCESSFULLY_FETCHED_SETTINGS_TOKEN= "Settings token for organizationId {} and branchId {} were obtained successfully";
+    public static final String SUCCESSFULLY_SAVED_TO_PARENT_FOLDER= "Successfully saved parent folder for customer =====> {}";
+    public static final String SUCCESSFULLY_SAVED_TO_EVENT_FOLDER= "Successfully saved event folder for customer =====> {}";
+    public static final String EXCEPTIONMSG = "Error occurred in transaction :{}";
+    public static final String RESULT = "EXPECTATION FAILED";
+    public static final String GENERALEXPECTIONMSG = "General Expection";
+    public static final String INVALIDMSG = "Invalid Search Input";
+    public static final String SERIALIZATIONMSG = "Data Serialization failed";
+    public static final String DATACONSTRAINTMSG = "Data Constraint Violation";
+    public static final String SERVICEMSG = "Internal Micro Service Error";
+    public static final String OPERATIONNOTSUPPORTEDMSG = "No Such Operation Supported";
+    public static final String DUPLICATIEDKEYMSG = "Duplicated Entry";
+    public static final String DATAINTEGRATYMSG = "Data Integrity Violation";
+    public static final String MINIOEXCEPTIONMSG="Minio Exception";
+    public static final String DATAACCESSSMSG = "Data Access violation";
+    public static final String NONTRANSIENTDATAMSG  = "Non Transient Data exception";
+    public static final String NOAVAILABLEDATAMSG  = "No Available Data exception";
+    public static final String RUNTIMEMSG  = "Micro Service Runtime error";
+    public static final String SQLMSG = "Database sql exception";
+    public static final String AUTHORIZATION_HEADER = "Authorization";
+    public static final String DEFAULT_INCLUDE_PATTERN = "/api/.*";
+    public static final String HEADER = "Header";
+    public static final String BEARER = "BEARER";
+    public static final String AUTHORIZATION_FLOW = "Authorization: Bearer ";
+    public static final String SCHEME_NAME = "Bearer Scheme";
+    public static final String SCHEME = "Bearer";
+    public static final String AUTHORIZATION_DESCRIPTION = "Authorization via Permission Service on Pitch Savi Environment";
+    private Constants(){}
+
+}

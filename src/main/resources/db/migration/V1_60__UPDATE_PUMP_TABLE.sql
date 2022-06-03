@@ -1,0 +1,2 @@
+ALTER TABLE public.pump
+ADD COLUMN sides INTEGER;
