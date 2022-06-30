@@ -2,10 +2,7 @@ package com.ethbek.mezion.inventory.service.services;
 
 import com.ethbek.mezion.inventory.service.models.dto.AccountsDto;
 import com.ethbek.mezion.inventory.service.models.entites.*;
-import com.ethbek.mezion.inventory.service.repositories.AccountRepository;
-import com.ethbek.mezion.inventory.service.repositories.AccountTypeRepository;
-import com.ethbek.mezion.inventory.service.repositories.CustomerRepository;
-import com.ethbek.mezion.inventory.service.repositories.LocationRepository;
+import com.ethbek.mezion.inventory.service.repositories.*;
 import com.ethbek.mezion.inventory.service.utilites.IDGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +31,9 @@ public class AccountService {
     private AccountRepository accountRepository;
 
     @Autowired
+    private AccountHistoryRepository accountHistoryRepository;
+
+    @Autowired
     private LocationRepository locationRepository;
 
     @Autowired
@@ -49,6 +49,7 @@ public class AccountService {
     public ResponseEntity<Object> getAccountsByLocation(String locationId, int size, int page){
         Pageable paging = PageRequest.of( page, size, Sort.by(CREATED_AT).descending());
         Optional<Location> location = locationRepository.findByLocationId(locationId);
+        accountHistoryRepository.findAll();
         if(location.isPresent()){
             return new ResponseEntity<>(accountRepository.findByLocation(location.get(), paging), HttpStatus.OK);
         }

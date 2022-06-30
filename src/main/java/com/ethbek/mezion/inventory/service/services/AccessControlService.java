@@ -1,6 +1,7 @@
 package com.ethbek.mezion.inventory.service.services;
 
 
+import com.ethbek.mezion.inventory.service.models.avro.RoleMap;
 import com.ethbek.mezion.inventory.service.permission.AuthenticatedUser;
 import com.ethbek.mezion.inventory.service.permission.Role;
 import com.ethbek.mezion.inventory.service.permission.SystemRights;
@@ -24,6 +25,7 @@ public class AccessControlService {
                 .map( Role::getRoleId)
                 .findFirst().orElse("");
     }
+
 
     public boolean isGeneral(AuthenticatedUser user, Long organisationalId, String branchId) {
 
