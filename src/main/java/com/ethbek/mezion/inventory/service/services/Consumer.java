@@ -1,3 +1,4 @@
+/*
 package com.ethbek.mezion.inventory.service.services;
 
 import com.ethbek.mezion.inventory.service.exceptions.InventoryServiceException;
@@ -47,3 +48,4 @@ public class Consumer {
 
     }
 }
+*/

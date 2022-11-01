@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ethbek.mezion</groupId>
-	<artifactId>inventory.service</artifactId>l
+	<artifactId>inventory.service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>inventory.service</name>
 	<description>Inventory Service </description>
@@ -290,7 +290,7 @@
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-api</artifactId>wa
+					<artifactId>slf4j-api</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
