@@ -105,7 +105,7 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.2.32</version>
+			<version>1.6.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.woodstox</groupId>
@@ -219,7 +219,7 @@
 		<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.6</version>
+			<version>0.8.7</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.allenru/jackson-morphed-result -->
 		<dependency>
@@ -276,7 +276,7 @@
 		<dependency>
 			<groupId>org.apache.avro</groupId>
 			<artifactId>avro-compiler</artifactId>
-			<version>1.8.2</version>
+			<version>1.9.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
